@@ -1,2 +1,2 @@
 # kota-business
-I will be using React js, a javascript framework to build a website for a small business called 'Kotalicious'.
+I will be using Django, a python web framework to complete the second half of the kotalicious business link - https://github.com/nickypelo/kota-business >> front end project built using react.
