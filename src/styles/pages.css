@@ -1,0 +1,216 @@
+h3{
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hashtag{
+    min-height: 36;
+}
+
+.App{
+    /* background-color: hsla(29, 68%, 39%, 0.404); */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.poster{
+    height: 60vh;
+    background-image: url(/lovie_wam.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 2em;
+    font-size: 1,5rem;
+}
+
+.poster-text{
+    font-size: 1.5em;
+    margin: auto 0;
+    padding: 0.625em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    background-color: hsla(0, 23%, 43%, 0.747);
+    font-family: sans-serif;
+}
+
+.poster-text p:nth-child(2){
+    font-size: 0.625em;
+}
+
+.hashtag{
+    overflow-wrap: break-word;
+}
+
+.special{
+    background-image: radial-gradient(whitesmoke, rgb(194, 126, 42));
+    margin: 1em auto;
+    box-shadow: -2px -2px 7px;
+    min-height: 50vh;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.text{
+    flex-grow: 1;
+    padding: 1em;
+    margin-right: 0,5em;
+    text-align: center;
+    width: min(45%, 350px);
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+
+.text p{
+    margin-top: 1em;
+    padding-top: 1em;
+    
+}
+
+.special figure{
+    width: min(100%, 400px);
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.special img{ 
+    min-width: 100%;
+}
+
+.content{
+    min-height: 75vh;
+    margin-bottom:24px;
+    font-size: 1.5rem;
+}
+
+.special{
+    max-width: 80%;
+    
+}
+
+.reviews{
+    margin: 0.5em auto;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 800px;
+}
+
+.menu{
+    padding: 1em;
+    min-height: 100vh;
+    width: min(80%, 1000px);
+    margin: 0 auto;
+    background-image: radial-gradient(whitesmoke, rgb(194, 126, 42));
+}
+
+.menu h1{
+    padding: 0.5em;
+    font-size: 2rem;
+    text-align: center;
+    border: 3px dotted
+}
+
+.menu-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid burlywood;
+    box-shadow: 2px 2px 3px burlywood;
+}
+
+.kota-img, .kota-img img{
+    border-radius: 1rem;
+}
+
+.kota-img{
+    margin: 1em;
+    border: 7px solid lightblue;
+    width: 350px;
+    height: 250px;
+    background-image: url(/chip_roll.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.kota-details{
+    width: 40%;
+    margin-left: 1em;
+}
+
+.name-price{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-bottom: 1px solid;
+}
+
+.ingredients{
+    margin-top: 1em;
+    font-size: 1.2rem;
+}
+
+.about{
+    min-height: 50vh;
+
+}
+
+.info{
+    box-shadow: 2px 2px 7px lightblue;
+    background-image: radial-gradient(whitesmoke, rgb(194, 126, 42));
+    padding: 1em;
+    width: min(85%, 1200px);
+    margin: 1em auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(38, 27, 109);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-shadow: 1px 0 1px;
+}
+
+.info p{
+    padding-bottom: 1em;
+    border-bottom: 1px solid;
+}
+
+.info figure{
+    width: fit-content;
+    margin: 1em auto;
+}
+
+.info figcaption{
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.addOn-cart{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid lightblue;
+    width: 100px;
+    border-radius: 10px;
+    margin: 1em auto;
+}
+
+.addOn-icon{
+    width: 30%;
+    height: auto;
+    color: brown;
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+

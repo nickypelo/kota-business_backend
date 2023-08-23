@@ -1,0 +1,196 @@
+/*  || SMALL SCREEN */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.menu-icon{
+    margin-left: 1em;
+    margin-right: 0;
+    padding-top: 17px;
+}
+
+.menu-icon:hover{
+    color: azure;
+}
+
+.menu-icon span{
+    display: block;
+    width: 50px;
+    padding-left: 10;
+    margin-bottom: 8px;
+    height: 6px;
+    background-color: brown;
+}
+
+@media screen and (min-width: 310px){
+    body{
+        width: 100%;
+        /* background-image: radial-gradient(yellow, red); */
+    }
+
+    .kota-img{
+        display: none;
+    }
+    
+    
+    .logo-placeholder{
+        width: 80%;
+    }
+
+    .special p{
+        width: 300;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+
+    .reviews figcaption{
+        text-align: center;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+
+    .nav-small{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: coral;
+        width: 100%;
+        height: 100vh;
+        margin-left: 1rem;
+        padding: 0.5em;
+    }
+
+
+    .reviews{
+        width: 100%;
+    }
+
+    .nav-small-header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px solid lightgray;
+        height:10vh;
+        padding-bottom: inherit;
+    }
+
+    .nav-small-header figure{
+        width: 50%;
+        background-image: url(/kotalicious_cpt-20220806-0006.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+    .nav-small ul{
+        height: 80vh;
+    }
+
+    .nav-small ul li{
+        list-style: none;
+        height: 2.8em;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 3px solid lightgray;
+    }
+
+    .nav-small a, .nav-small:visited{
+        width: fit-content;
+        text-decoration: none;
+        color: black;
+        margin: auto 0.5em;
+    }
+    
+    .nav-small p{
+        width: fit-content;
+        margin: 0 auto;
+        padding: 8px;
+        background-color: lightcoral;
+    }
+    
+}
+
+/*  || MEDIUM SCREEN */
+@media screen and (min-width: 412px){
+    .company-section figure img{
+        margin: 0 auto;;
+    }
+
+    .reviews{
+        max-width: 80%;
+    }
+
+}
+
+/*  || MEDIUM SCREEN */
+@media screen and (min-width: 520px){
+    .kota-img{
+        display: block;
+    }
+
+}
+
+/*  || MEDIUM SCREEN */
+@media screen and (max-width: 720px){
+    .menu-option{
+        flex-direction: column;
+    }
+
+    .poster-text{
+        height: 100%;
+    }
+    .kota-details{
+        min-width: 100%;
+        margin: 0 auto;
+    }
+ 
+}
+
+/*  || TABLET */
+@media screen and (min-width: 768px){
+    .special figure{
+        /* background-color: black; */
+        width: 100%;
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+   
+    .poster-text{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 915px){
+    
+    .nav-small{
+        display: none;
+    }
+    .logo-placeholder{
+        max-width: 40%;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .nav-bar{
+        display: block;
+    }
+}
+
+/* SMALL LAPTOP*/
+@media screen and (min-width: 1024px){
+    .ceo-quote p{
+        width: 45%;
+    }
+
+    .ceo-quote figure{
+        width: 50%
+    }
+}
