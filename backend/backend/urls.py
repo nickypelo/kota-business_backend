@@ -16,15 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from kotalicious import views
-from rest_framework import routers
-
-router = routers.DefaultRouter()
-router.register(r'customers', views.CustomerView, 'customer')
-router.register(r'choices', views.OrderView, 'choose')
-router.register(r'products', views.ProductView, 'product')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include('kotalicious.api.urls')),
 ]

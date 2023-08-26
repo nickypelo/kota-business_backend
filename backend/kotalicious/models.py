@@ -6,6 +6,7 @@ class Customer(models.Model):
     customer_name = models.CharField(max_length=30)
     customer_surname = models.CharField(max_length=30)
     customer_email = models.EmailField()
+    customer_username = models.CharField(max_length=30)
     customer_pwd = models.CharField(max_length=10)
 
     def __str__(self):
@@ -18,6 +19,7 @@ class Order(models.Model):
     order_name = models.CharField(max_length=20)
     order_price = models.IntegerField()
     order_ingredients = models.CharField(max_length=50)
+    # order_date = models.DateField()
 
     def __str__(self):
         return self.order_name
@@ -31,5 +33,5 @@ class Product(models.Model):
     product_name = models.CharField(max_length=30)
     product_price = models.IntegerField()
     product_ingredients = models.CharField(max_length=500)
-    # product_image = models.ImageField(width_field=250, height_field=250)
+    product_image = models.CharField(max_length=40)
 

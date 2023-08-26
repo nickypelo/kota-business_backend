@@ -58,6 +58,7 @@ const Cart = ({close, orders }) => {
         return [...new Set(listOfOrders)]
     }
 
+
     /**
      * Increments the counter.
      * @param {*} values 
@@ -114,6 +115,7 @@ const Cart = ({close, orders }) => {
         return answer;
     }
 
+    
     return(
         <article className="orders-placed">
             <section className='cart-heading'>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react"
 import { FaPlus, FaMinus } from "react-icons/fa";
+import api from '../api/menu'
 
 class Counting{
     constructor(value){
@@ -12,37 +13,7 @@ const Menu = ({addedToCart, removedFromCart}) => {
 
     const API_URL = 'http://localhost:5500/menu';
 
-   
-    const menuItems = [
-        {
-            "id": 1,
-            "name": "CHIP ROLL KOTA",
-            "price": 40,
-            "ingredients": "Deep fried chips with our special seasoning topped off with mango atchaar on toasted buns with our secret assorted sauces.",
-            "img": "/chip_roll.jpg"
-        },
-        {
-            "id": 2,
-            "name": "THE LOVIE WAM KOTA",
-            "price": 70,
-            "ingredients": "Deep fried chips with our special seasoning, mango atchaar, fried viennas and fried polony with cheddar cheese on toasted buns with our assorted secret sauces.",
-            "img": "/lovie_wam.jpg"
-        },
-        {
-            "id": 3,
-            "name": "THE BAE KOTA",
-            "price": 90,
-            "ingredients": "Deep fried chips with our special seasoning, mango atchaar, fried viennas and fried polony. Fashioned with our sizzling honey glazed rashers and seared rib burger. Garnished with the finest of cheddar cheese topped with our assorted secret sauces.",
-            "img": "/bae.jpg"
-        },
-        {
-            "id": 4,
-            "name": "VEGGIE MONATE KOTA",
-            "price": 105,
-            "ingredients": "Deep fried chips with our special seasoning and atchaar. Fashioned with an assortment of vegan sausage, patty and bacon bits. Garnished with the best vegan cheese, topped with our assorted vegan sauces on toasted buns.",
-            "img": "/veggie_monate.jpg"
-        }
-    ]
+    const [menuItems, setMenuItems] = useState([])
 
     let [count1, setCount1] = useState(0);
     let [count2, setCount2] = useState(0);
@@ -92,44 +63,49 @@ const Menu = ({addedToCart, removedFromCart}) => {
         
     }
 
-    // const [menuItems, setMenuItems] = useState([]);
 
-    // useEffect(() =>{
 
-    //     const fetchItems = async () =>{
-    //         try {
-    //             const response = await fetch(API_URL);
-    //             const menuList = await response.json();
-    //             console.log(menuList)
-    //             setMenuItems(menuList);
-    //         } catch (error) {
-    //             console.log(error.message);
-    //         }
-    //     }
-    //     fetchItems();
-    // }, [])
+    useEffect(() =>{
+        const fetchMenu = async () => {
+            try{
+                const response = await api.get('/')
+                setMenuItems(response.data);
+            } catch(err){
+                console.log(err.message)
+            }
+        }
+
+        fetchMenu();
+    }, [])
+
 
     return(
         <section className="menu">
             <h1>Menu</h1>
             <div className="menu-list">
-                {menuItems.map((menu)=>(
-                    <article className="menu-option" key={menu.id}>
-                        <figure className="kota-img" style={{backgroundImage: `url(${menu.img})`}}></figure>
-                        <div className="kota-details">
-                            <div className="name-price">
-                                <p>{menu.name}</p>
-                                <p>R{menu.price}</p>
+                {menuItems.length === 0 ?
+                    <h2>Have something MR Business man</h2>
+                    
+                    :
+                    menuItems.map((menu)=>(
+                        <article className="menu-option" key={menu.id}>
+                            <figure className="kota-img" style={{backgroundImage: `url(${menu.product_image})`}}></figure>
+                            <div className="kota-details">
+                                <div className="name-price">
+                                    <p>{menu.product_name}</p>
+                                    <p>R{menu.product_price}</p>
+                                </div>
+                                <p className="ingredients">{menu.product_ingredients}</p>
+                                <div className="addOn-cart">
+                                    <FaMinus className= "addOn-icon"  onClick={() => counter(menu.id,-1)}/>
+                                    <p>{returnValue(menu.id)}</p>
+                                    <FaPlus className= "addOn-icon"  onClick={() => counter(menu.id, 1)}/>
+                                </div>
                             </div>
-                            <p className="ingredients">{menu.ingredients}</p>
-                            <div className="addOn-cart">
-                                <FaMinus className= "addOn-icon"  onClick={() => counter(menu.id,-1)}/>
-                                <p>{returnValue(menu.id)}</p>
-                                <FaPlus className= "addOn-icon"  onClick={() => counter(menu.id, 1)}/>
-                            </div>
-                        </div>
-                    </article>
-                ))}
+                        </article>
+                    ))
+                }
+                
             </div>
             
         </section>

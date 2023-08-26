@@ -4,9 +4,9 @@ import Footer from "./components/Footer.jsx";
 import Contact from "./pages/Contact.jsx";
 import Content from "./pages/Content.jsx";
 import Menu from "./pages/Menu.jsx";
+import Account from "./pages/Account.jsx";
 import About from "./pages/About.jsx";
-
-
+import {AuthProvider} from "./context/AuthContext.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
@@ -63,17 +63,20 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header order={order}/>
-        <Routes>
-          <Route path ='/' element={<Content/>}/>
-          <Route path ='/menu' element={<Menu 
-                addedToCart={addedToCart}
-                removedFromCart={removedFromCart}
-            />}/>
-          <Route path ='/contact' element={<Contact/>}/>
-          <Route path ='/about' element={<About/>}/>
-        </Routes>
-        <Footer />
+        <AuthProvider>
+          <Header order={order}/>
+          <Routes>
+            <Route path ='/' element={<Content/>}/>
+            <Route path ='/menu' element={<Menu 
+                  addedToCart={addedToCart}
+                  removedFromCart={removedFromCart}
+              />}/>
+            <Route path ='/contact' element={<Contact/>}/>
+            <Route path ='/about' element={<About/>}/>
+            <Route path='/profile' element={<Account/>}/>
+          </Routes>
+          <Footer />
+        </AuthProvider>
       </Router>      
     </div>
   );

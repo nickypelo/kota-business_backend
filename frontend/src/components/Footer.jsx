@@ -24,7 +24,7 @@ const Footer = () => {
             </section>
             <section className="company-section">
                 <figure>
-                    <img src="/kotalicious_cpt-20220806-0006.jpg" alt="logo"
+                    <img src="/kota-logo.png" alt="logo"
                         width="200"
                     />
                 </figure>
