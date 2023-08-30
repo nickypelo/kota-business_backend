@@ -10,6 +10,12 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
+django-rest-auth = "*"
+django-rest-auth-dj4 = "*"
+requests = "*"
+django-allauth = "*"
+django-registration-redux = "*"
+social-auth-app-django = "*"
 
 [dev-packages]
 

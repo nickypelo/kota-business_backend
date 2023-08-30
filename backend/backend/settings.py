@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-from datetime import timedelta
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^oaszt+i4%d!e1*25#ndom3q*#1kx5&7y_s#o9ge-+iu)#6y)='
+SECRET_KEY = 'django-insecure-w9spkussx)aky+br%wh-@4f!=1vgf-p2+31co$g200cc@=-y#^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,42 +31,63 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'kotalicious.apps.KotaliciousConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
+
+    # local apps
+    'kotalicious.apps.KotaliciousConfig',
+    'api.apps.ApiConfig',
+
+    # 3rd party
     'rest_framework',
-    'rest_framework_simplejwt.token_blacklist',
+    'corsheaders',
+    'rest_framework.authtoken',
+    'rest_auth',
+
+
+    # 'django.contrib.sites',
 ]
 
+SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST = 'smtp.mailgun.org'
+# EMAIL_HOST_USER = 'postmaster@YOUR_DOMAIN_NAME'  # Replace with your Mailgun domain
+# EMAIL_HOST_PASSWORD = 'YOUR_MAILGUN_API_KEY'  # Replace with your Mailgun API key
+# DEFAULT_FROM_EMAIL = 'info@YOUR_DOMAIN_NAME'
+
+AUTH_USER_MODEL = 'kotalicious.CustomUser'
+
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-    'ROTATE_REFRESH_TOKENS': True,
-    'BLACKLIST_AFTER_ROTATION': True,
-
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication'
+    ]
 }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:5174',
+)
 
 ROOT_URLCONF = 'backend.urls'
 
@@ -94,8 +115,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kotalicious',
+        'USER': 'Levi',
+        'PASSWORD': 'blessed',
+        'HOST': 'localhost',
+        'POST': 5432
     }
 }
 
@@ -118,12 +143,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# WHITELIST REACT PORT
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173'
-]
-CORS_ALLOWED_CREDENTIALS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

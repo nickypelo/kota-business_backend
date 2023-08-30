@@ -74,7 +74,6 @@ const Menu = ({addedToCart, removedFromCart}) => {
                 console.log(err.message)
             }
         }
-
         fetchMenu();
     }, [])
 
@@ -89,7 +88,7 @@ const Menu = ({addedToCart, removedFromCart}) => {
                     :
                     menuItems.map((menu)=>(
                         <article className="menu-option" key={menu.id}>
-                            <figure className="kota-img" style={{backgroundImage: `url(${menu.product_image})`}}></figure>
+                            <figure className="kota-img" style={{backgroundImage: `url(${menu.product_img})`}}></figure>
                             <div className="kota-details">
                                 <div className="name-price">
                                     <p>{menu.product_name}</p>

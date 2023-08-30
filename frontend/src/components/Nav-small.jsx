@@ -8,7 +8,7 @@ const NavSmall = ({close}) => {
         <nav className="nav-small">
             <section className="nav-small-header">
                 <figure></figure>
-                <FaWindowClose classname='close-sidebar' onClick={close} />
+                <FaWindowClose className='close-sidebar' onClick={close} />
             </section>
             <ul>
                 <li>

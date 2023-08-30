@@ -9,6 +9,7 @@ import About from "./pages/About.jsx";
 import {AuthProvider} from "./context/AuthContext.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import orders from "./api/orders.jsx";
 
 function App() {
 
@@ -51,13 +52,20 @@ function App() {
     const add = [...order, ...selected];
     setOrder(add);
     console.log('check cart')
-    console.log(order)
+    console.log(order) 
   }
 
   const removedFromCart = (selectedKota) =>{
     // const id = order.filter((item) => selectedKota===item.id);
+    let item = 0;
+    for(item; item < order.length; item++){
+      if(order[item].id === selectedKota){
+        order.splice(item, 1);
+        break
+      }
+    }
     console.log('check cart')
-    setOrder([])
+    setOrder([order])
   }
 
   return (

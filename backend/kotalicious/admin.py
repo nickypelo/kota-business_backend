@@ -1,7 +1,18 @@
-from django.db import models
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .models import CustomUser, Product
 
 
-# Create your models here.
-# class Customer(models.Model):
-#     customer_name = models.CharField(max_length=30)
-    # customer_surn
+class CustomUserAdmin(UserAdmin):
+    add_form = CustomUserCreationForm
+    form = CustomUserChangeForm
+    model = CustomUser
+
+
+admin.site.register(Product)
+admin.site.register(CustomUser, CustomUserAdmin)
+
+
+# Register your models here.

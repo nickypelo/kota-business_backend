@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import api from '../api/orders';
-import { useState } from 'react';
-import Register from '../components/Register';
-import Login from '../components/Login';
+import { useState , useEffect} from 'react';
+import Register from '../auth/Register';
+import Login from '../auth/Login';
+import AuthContext from '../context/AuthContext';
 
 
 const Account = () => {
     const [history, setHistory] = useState([]);
     const [show, setShow] = useState(false);
     const [logOnto, setLogOnto] = useState(true);
+
+    const {user, logOff} = useContext(AuthContext)
+
     const items = [];
 
 
@@ -25,15 +29,16 @@ const Account = () => {
         setShow(!show);
     }
 
+   
 
      return (
         //content of the whole page
         <>
-        {!show ?
+        {!localStorage.getItem('authTokens') ?
             (logOnto ?
                 <Register useLogin={haveAccount}/>
             :
-                <Login access={flip}/>
+                <Login useRegister={haveAccount}/>
             )
             :
 
@@ -44,9 +49,10 @@ const Account = () => {
                             <img src="" alt="" className="picture" />
                             <figcaption>
                                 <p>Name and Surname</p>
-                                <p>Username</p>
+                                <p>{user.username}</p>
                             </figcaption>
                         </figure>
+                        <button onClick={logOff}>Log Off</button>
                     </section>
 
 

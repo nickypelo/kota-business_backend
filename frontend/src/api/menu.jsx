@@ -2,5 +2,5 @@ import axios from "axios";
 
 
 export default axios.create({
-    baseURL: 'http://localhost:8000/api/products'
+    baseURL: 'http://localhost:8000/api/'
 });

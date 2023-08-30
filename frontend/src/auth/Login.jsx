@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
 
-const Login = ({access}) => {
+const Login = ({useRegister}) => {
 
-    let {loginUser} = useContext(AuthContext);
+    const {loginUser} = useContext(AuthContext);
+
 
   return (
     <article className="login">
@@ -20,7 +21,7 @@ const Login = ({access}) => {
                 <a href="">Forgot Password</a>
                 <input type="submit" name='submit' className='form-submit' />
             </div>
-            <p>No account? <a href="">Register</a></p>
+            <p>No account? <button onClick={useRegister}>Register</button></p>
         </form>
     </article>
   )
