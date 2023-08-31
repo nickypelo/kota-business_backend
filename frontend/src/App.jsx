@@ -8,6 +8,7 @@ import Account from "./pages/Account.jsx";
 import About from "./pages/About.jsx";
 import {AuthProvider} from "./context/AuthContext.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ResetPassword from "./auth/ResetPassword.jsx";
 import { useState, useEffect } from 'react';
 import orders from "./api/orders.jsx";
 
@@ -82,6 +83,7 @@ function App() {
             <Route path ='/contact' element={<Contact/>}/>
             <Route path ='/about' element={<About/>}/>
             <Route path='/profile' element={<Account/>}/>
+            <Route path='/reset' element={<ResetPassword/>}/>
           </Routes>
           <Footer />
         </AuthProvider>

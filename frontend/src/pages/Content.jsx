@@ -24,7 +24,7 @@ const Content = () => {
                     <img src="/discount_2.jpg" alt="" width="350"/>
                 </figure>
             </section>
-            <h3>Word of Mouth</h3>
+            <h3>Customer Reviews</h3>
             <Reviews />
             <Quote />
         </main>

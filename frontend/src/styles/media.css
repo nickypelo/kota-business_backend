@@ -34,7 +34,9 @@ img{
     
     
     .logo-placeholder{
-        width: 80%;
+        width: 158px;
+        height: auto;
+        padding: 12px;
     }
 
     .special p{
@@ -113,7 +115,99 @@ img{
         padding: 8px;
         background-color: lightcoral;
     }
+
+
+    .register, .login, .reset-pwd{
+        padding: 0.5em;
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .register h2, .login h2,
+    .reset-pwd h2{
+        text-align: center;
+    }
+
+    .register-form, .login-form,
+    .reset-form{
+        margin: 2rem auto;
+        box-shadow: -2px -2px 7px #000;
+        font-size: 1rem;
+        padding: 0.5em;
+        border-radius: 24px;
+        max-width: 400px;
+    }
+
+    .register-form label,
+    .login-form label,
+    .reset-form label{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8px;
+    }
     
+    .register-form input,
+    .login-form input,
+    .reset-form input{
+        width: 250px;
+        margin-bottom: 12px;
+        height: 38px;
+    }
+
+    .register-form .submit-form{
+        width: 80px;
+        justify-self: end;
+    }
+
+    .login-form .form-submit,
+    .reset-form .reset-submit{
+        width: 80px;
+        margin-left: 2rem;
+        margin-top: 12px;
+    }
+
+    .register-form button,
+    .login-form button{
+        font-size: 1rem;
+        margin-left: 8px;
+        margin-top: 8px;
+        padding: 4px;
+        border-radius: 16px;
+    }
+
+    /***************** ABOUT PAGE **********/
+    .info p, .info figcaption{
+        font-size: 1rem;
+    }
+
+    .info h3{
+        font-size: 1.5rem;
+    }
+
+
+    /**************** HOME PAGE **************/
+    .poster-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .special{
+        order: -1;
+    }
+
+    .content h3{
+        font-size: 1.5rem;
+        background-color: chocolate;
+        text-align: center;
+        font-family: sans-serif;
+        color: bisque;
+        margin: 3rem 0;
+    }
+
+    .footer h3{
+        font-size: 1.5rem
+    }
 }
 
 /*  || MEDIUM SCREEN */
@@ -124,6 +218,10 @@ img{
 
     .reviews{
         max-width: 80%;
+    }
+
+    .ceo-quote p{
+        min-width: 250px;
     }
 
 }
@@ -168,17 +266,21 @@ img{
 
 @media screen and (min-width: 915px){
     
+    
     .nav-small{
         display: none;
     }
-    .logo-placeholder{
-        max-width: 40%;
-    }
+    
+
     .menu-icon{
         display: none;
     }
     .nav-bar{
         display: block;
+    }
+
+    .nav-bar a{
+        font-size: 1.2rem;
     }
 
     .header-icons{
@@ -189,6 +291,30 @@ img{
     .user-icon{
         margin-left: 1em;
     }
+
+    .logo-placeholder{
+        margin-left: 3rem;
+    }
+
+    .text{
+        font-size: 1.5rem;
+    }
+    .ceo-quote{
+        font-size: 1.5rem;
+    }
+
+    .info p, .info figcaption{
+        font-size: 1.5rem;
+    }
+
+    .info h3{
+        font-size: 2rem;
+    }
+
+    .poster .poster-text{
+        font-size: 2rem;
+    }
+
 }
 
 /* SMALL LAPTOP*/
@@ -200,4 +326,8 @@ img{
     .ceo-quote figure{
         width: 50%
     }
+
+
+
+
 }

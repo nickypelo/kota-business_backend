@@ -16,6 +16,7 @@ requests = "*"
 django-allauth = "*"
 django-registration-redux = "*"
 social-auth-app-django = "*"
+django-userena-ce = "*"
 
 [dev-packages]
 

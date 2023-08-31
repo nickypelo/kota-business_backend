@@ -83,7 +83,7 @@ const Menu = ({addedToCart, removedFromCart}) => {
             <h1>Menu</h1>
             <div className="menu-list">
                 {menuItems.length === 0 ?
-                    <h2>Have something MR Business man</h2>
+                    <h2>*Coming soon*</h2>
                     
                     :
                     menuItems.map((menu)=>(

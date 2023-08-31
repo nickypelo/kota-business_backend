@@ -37,6 +37,7 @@ const Account = () => {
         {!localStorage.getItem('authTokens') ?
             (logOnto ?
                 <Register useLogin={haveAccount}/>
+                // <p></p>
             :
                 <Login useRegister={haveAccount}/>
             )

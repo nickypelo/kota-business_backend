@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 
 const Login = ({useRegister}) => {
@@ -8,6 +9,7 @@ const Login = ({useRegister}) => {
 
   return (
     <article className="login">
+        <h2>Login</h2>
         <form action="" className='login-form' onSubmit={loginUser}>
             <label htmlFor="">
                 Username: <input type="text" name='username'/>
@@ -18,8 +20,8 @@ const Login = ({useRegister}) => {
             </label>
 
             <div className="form-options">
-                <a href="">Forgot Password</a>
                 <input type="submit" name='submit' className='form-submit' />
+                <Link to='/reset'>Forgot Password</Link>
             </div>
             <p>No account? <button onClick={useRegister}>Register</button></p>
         </form>

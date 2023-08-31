@@ -50,6 +50,8 @@ INSTALLED_APPS = [
 
 
     # 'django.contrib.sites',
+    'allauth',
+
 ]
 
 SITE_ID = 1
