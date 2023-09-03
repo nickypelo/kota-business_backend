@@ -47,7 +47,8 @@ const Cart = ({close, orders }) => {
     const getIds = (listOfOrders) =>{
         const list = listOfOrders.map((item)=> (item.id !== undefined ?  item.id : undefined))
         return list
-    }   
+    } 
+      
     
     /**
      * Ensures that the cart does not have duplicate items

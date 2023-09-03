@@ -6,7 +6,6 @@ import Content from "./pages/Content.jsx";
 import Menu from "./pages/Menu.jsx";
 import Account from "./pages/Account.jsx";
 import About from "./pages/About.jsx";
-import {AuthProvider} from "./context/AuthContext.jsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ResetPassword from "./auth/ResetPassword.jsx";
 import { useState, useEffect } from 'react';
@@ -72,7 +71,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <AuthProvider>
           <Header order={order}/>
           <Routes>
             <Route path ='/' element={<Content/>}/>
@@ -86,7 +84,6 @@ function App() {
             <Route path='/reset' element={<ResetPassword/>}/>
           </Routes>
           <Footer />
-        </AuthProvider>
       </Router>      
     </div>
   );

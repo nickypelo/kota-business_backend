@@ -11,8 +11,6 @@ class Counting{
 
 const Menu = ({addedToCart, removedFromCart}) => {
 
-    const API_URL = 'http://localhost:5500/menu';
-
     const [menuItems, setMenuItems] = useState([])
 
     let [count1, setCount1] = useState(0);
@@ -68,7 +66,7 @@ const Menu = ({addedToCart, removedFromCart}) => {
     useEffect(() =>{
         const fetchMenu = async () => {
             try{
-                const response = await api.get('/')
+                const response = await api.get('/');
                 setMenuItems(response.data);
             } catch(err){
                 console.log(err.message)

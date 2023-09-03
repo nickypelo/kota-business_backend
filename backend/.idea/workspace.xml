@@ -8,19 +8,31 @@
       <change beforePath="$PROJECT_DIR$/../Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotalicious/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kotalicious/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotalicious/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/kotalicious/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotalicious/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kotalicious/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/login_user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/login_user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/api/menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/api/menu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/auth/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/auth/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/auth/Register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/auth/Register.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/auth/ResetPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/auth/ResetPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/context/AuthContext.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Account.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Account.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Menu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/styles/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/styles/components.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/styles/media.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/styles/media.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/src/styles/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/styles/pages.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/utils/PrivateRoute.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +70,10 @@
       <updated>1693326936378</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:podman" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

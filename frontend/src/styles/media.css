@@ -119,13 +119,16 @@ img{
 
     .register, .login, .reset-pwd{
         padding: 0.5em;
-        max-width: 420px;
         margin: auto;
     }
 
     .register h2, .login h2,
-    .reset-pwd h2{
+    .reset-pwd h2, .account-container h2{
         text-align: center;
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2.5rem;
+        color: brown;
+        text-shadow: 2px 3px 2px gray;
     }
 
     .register-form, .login-form,
@@ -176,11 +179,11 @@ img{
     }
 
     /***************** ABOUT PAGE **********/
-    .info p, .info figcaption{
+    .info p, .info figcaption, .social-contact p{
         font-size: 1rem;
     }
 
-    .info h3{
+    .info h3, .social-contact h2{
         font-size: 1.5rem;
     }
 
@@ -247,6 +250,8 @@ img{
         min-width: 100%;
         margin: 0 auto;
     }
+
+    
  
 }
 
@@ -262,6 +267,10 @@ img{
     .poster-text{
         width: 60%;
     }
+
+    .register, .login, .reset-pwd{
+        width: 450px;
+     }
 }
 
 @media screen and (min-width: 915px){
@@ -269,6 +278,11 @@ img{
     
     .nav-small{
         display: none;
+    }
+
+    .content h3{
+        font-size: 2.5rem;
+        margin-top: 0;
     }
     
 
@@ -293,7 +307,7 @@ img{
     }
 
     .logo-placeholder{
-        margin-left: 3rem;
+        margin-left: 5rem
     }
 
     .text{
@@ -303,11 +317,11 @@ img{
         font-size: 1.5rem;
     }
 
-    .info p, .info figcaption{
+    .info p, .info figcaption, .social-contact p{
         font-size: 1.5rem;
     }
 
-    .info h3{
+    .info h3, .social-contact h2{
         font-size: 2rem;
     }
 
@@ -327,7 +341,12 @@ img{
         width: 50%
     }
 
+    .nav-bar{
+        margin-left: 50%
+    }
 
-
+    .text{
+        width: 350px;
+    }
 
 }

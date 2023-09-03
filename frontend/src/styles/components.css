@@ -83,8 +83,8 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    top:12px;
-    right: 12px;
+    top:7px;
+    left:20px;
     color: brown;
     padding: 1px;
     font-weight: 800;
@@ -95,6 +95,7 @@
     height: auto;
     /* margin: auto; */
     margin-right: 8px;
+    position: relative;
 }
 
 .cart-icon:hover, .user-icon:hover{
@@ -110,7 +111,7 @@
     right: 0;
     background-color: #fff;
     opacity: 80%;
-    max-height: 150px;
+    /* max-height: 150px; */
     width: min(90%, 380px);
     border-radius: 10px;
     overflow-y: auto;
@@ -184,7 +185,7 @@ h4{
 .feedback{
     max-height: 300px;
     width: min(100%, 370px);
-    margin: 0.5em;
+    margin: 1rem;
     padding: 0.5em;
     border: 1px solid lightgrey;
     border-radius: 0.5em;
@@ -311,6 +312,8 @@ h4{
     margin: 0.25em;
 }
 
+/************* ACCOUNT **********/
+
 .consumer-profile{
     margin-top: 2em;
     margin-bottom: 2em;
@@ -320,8 +323,16 @@ h4{
     height: 400px;
     width: 300px;
     margin: auto;
-    border: 2px solid ;
+    /* border: 2px solid ; */
     text-align: center;
+    border-bottom: 2px solid crimson;
+
+}
+
+.account-container button{
+    padding: 8px;
+    margin: 1rem auto;
+    display: block;
 }
 
 .picture{
@@ -342,6 +353,22 @@ h4{
     /* padding: 2rem; */
     /* border-radius: 24px; */
 }
+
+.register p, .login p{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form-options{
+    text-align: right;
+}
+
+.form-options a{
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
 
 .register-form label,
 .login-form label,

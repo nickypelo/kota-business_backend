@@ -50,7 +50,7 @@ h3{
 
 .special{
     background-image: radial-gradient(whitesmoke, rgb(194, 126, 42));
-    margin: 1em auto;
+    margin: 3rem auto;
     box-shadow: -2px -2px 7px;
     min-height: 50vh;
     text-align: center;
@@ -172,7 +172,7 @@ h3{
 
 }
 
-.info, .social-contact{
+.info, .social-contact, .purchase-history{
     box-shadow: 2px 2px 7px lightblue;
     background-image: radial-gradient(whitesmoke, rgb(194, 126, 42));
     padding: 1em;
@@ -185,16 +185,40 @@ h3{
     text-shadow: 1px 0 1px;
 }
 
+.time-of-purchase{
+    border-bottom: 2px solid;
+    margin: 1rem;
+}
+
+.purchase-history h3, .time-of-purchase h4{
+    text-decoration: underline;
+}
+
+.purchase{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1rem;
+}
+
 .social-contact p{
-    margin-top: 1rem;
+    margin: 1rem;
     text-align: center;
+
+}
+
+.social-contact {
+    max-width: 500px;
+    height: 400px;
 }
 
 .social-contact a, .social-contact a:visited{
     display: block;
     text-align: center;
     margin: 1rem;
-    color: inherit;
+    color: brown;
+    font-size: 1rem;
 }
 
 

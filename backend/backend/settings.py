@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,12 +49,13 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
 
-
-    # 'django.contrib.sites',
     'allauth',
+    'allauth.socialaccount',
+    'allauth.account',
+    'rest_auth.registration',
 
 ]
-
+ 
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -88,7 +90,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:5174',
+    'http://localhost:5173',
 )
 
 ROOT_URLCONF = 'backend.urls'

@@ -20,7 +20,7 @@ const Footer = () => {
                 </address>
                 <Link to="https://www.instagram.com/kotalicious_cpt/" target="_blank"><FaInstagram className="instagram-icon social"/></Link>
                 <Link to="tel:+27746272912" target="-blank"><FaWhatsapp className="whatsapp-icon social"/></Link>
-                <Link to="https://tiktok.com" target="_blank"><FaTiktok className="tiktok-icon social"/></Link>
+                <Link to="https://tiktok.com/@kotalicious_cpt" target="_blank"><FaTiktok className="tiktok-icon social"/></Link>
             </section>
             <section className="company-section">
                 <figure>

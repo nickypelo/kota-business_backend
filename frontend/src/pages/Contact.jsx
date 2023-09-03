@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import '../styles/media.css';
-import AuthContext from "../context/AuthContext";
 
 const Contact = () =>{
-
-    let {name} = useContext(AuthContext)
 
     return(
         <section className="contact">
