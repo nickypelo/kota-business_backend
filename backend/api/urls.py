@@ -1,14 +1,13 @@
-from django.urls import path, include
-
-from .views import ProductAPIView, ProductDetailAPIView, OrderAPIView, OrderDetailAPIView, CustomUserAPIView, UserProfileView, ImageAPIView
-
-urlpatterns = [
-    path('images/', ImageAPIView.as_view()),
-    path('product/', ProductAPIView.as_view()),
-    path('product/<int:pk>/', ProductDetailAPIView.as_view()),
-    path('order/', OrderAPIView.as_view()),
-    path('order/<int:pk>', OrderDetailAPIView.as_view()),
-    path('users/', CustomUserAPIView.as_view()),
-    path('user-profile/', UserProfileView.as_view()),
-
-]
+# from django.urls import path
+# from .views import (ProductAPIView,
+#                     OrderAPIView,
+#                     OrderDetailView,
+#                     ImageAPIView
+#                     )
+#
+# urlpatterns = [
+#     path('product/', ProductAPIView.as_view(), name='products'),
+#     path('order/<int:pk>/', OrderDetailView.as_view(), name='specific_order'),
+#     path('order/', OrderAPIView.as_view(), name='orders'),
+#     path('image', ImageAPIView.as_view(), name='profile_picture')
+# ]

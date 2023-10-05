@@ -1,49 +1,44 @@
-from rest_framework import generics, permissions
-from rest_framework.response import Response
-
-from kotalicious.models import Product, Order, CustomUser, Image
-from .serializer import ProductSerializer, OrderSerializer, CustomUserSerializer, ForUser, ImageSerializer
-
-
-class CustomUserAPIView(generics.ListCreateAPIView):
-    # permission_classes = (permissions.IsAdminUser,)
-    permission_classes = (permissions.AllowAny,)
-    queryset = CustomUser.objects.all()
-    serializer_class = CustomUserSerializer
-
-
-class UserProfileView(generics.RetrieveAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-
-    def retrieve(self, request, *args, **kwargs):
-        serializer = ForUser(request.user)
-        return Response(serializer.data)
-
-
-# Product model all data view
-class ProductAPIView(generics.ListCreateAPIView):
-    permission_classes = (permissions.AllowAny,)
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-
-
-# Product data individual view
-class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-
-
-class OrderAPIView(generics.ListCreateAPIView):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
-
-
-class OrderDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Order.objects.all()
-    serializer_class = OrderSerializer
-
-
-class ImageAPIView(generics.ListCreateAPIView):
-    permission_classes = (permissions.AllowAny,)
-    queryset = Image.objects.all()
-    serializer_class = ImageSerializer
+# from rest_framework import generics
+# from rest_framework import permissions
+#
+#
+# from ..kotalicious.models import Product, Order, Image
+# from .serializer import (ProductSerializer, OrderSerializer,
+#                          ImageSerializer)
+#
+#
+# # Products viewed and edited by owner
+# class ProductAPIView(generics.ListCreateAPIView):
+#     permission_classes = (permissions.IsAdminUser,)
+#     queryset = Product.objects.all()
+#     serializer_class = ProductSerializer
+#
+#
+# # Orders made by users
+# class OrderAPIView(generics.ListCreateAPIView):
+#     # permission_classes = (permissions.IsAuthenticated,)
+#     queryset = Order.objects.all()
+#     serializer_class = OrderSerializer
+#
+#
+# # Orders made by users to be edited by users
+# class OrderDetailView(generics.RetrieveUpdateDestroyAPIView):
+#     # permission_classes = (permissions.IsAuthenticated,)
+#     queryset = Order.objects.all()
+#     serializer_class = OrderSerializer
+#
+#
+# # Users create and send images
+# class ImageAPIView(generics.ListCreateAPIView):
+#     permission_classes = (permissions.AllowAny,)
+#     queryset = Image.objects.all()
+#     serializer_class = ImageSerializer
+#
+#
+# # Users create and send images
+# class ImageDetailView(generics.RetrieveUpdateAPIView):
+#     permission_classes = (permissions.AllowAny,)
+#     queryset = models.Image.objects.all()
+#     serializer_class = ImageSerializer
+#
+#
