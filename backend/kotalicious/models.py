@@ -1,16 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-from django.conf import settings
+from django.contrib.auth.models import User
 
 
-# Custom User model
-class CustomUser(AbstractUser):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    email = models.EmailField()
-
-
-# Product model
+# Table for products made
 class Product(models.Model):
     product_name = models.CharField(max_length=30)
     product_price = models.IntegerField()
@@ -21,9 +13,9 @@ class Product(models.Model):
         return self.product_name
 
 
-# Orders model
+# Table for how orders are received
 class Order(models.Model):
-    order_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    order_user = models.ForeignKey(User, on_delete=models.CASCADE)
     order_name = models.CharField(max_length=30)
     order_price = models.IntegerField()
     order_date = models.DateTimeField()
@@ -33,7 +25,10 @@ class Order(models.Model):
         return self.order_user
 
 
+# Users Profile Pictures
 class Image(models.Model):
-    image_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='profiles/', null=True, blank=True)
+    image_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    profile_picture = models.ImageField(upload_to='profiles', null=True, blank=True)
 
+    def __str__(self):
+        return self.image_user

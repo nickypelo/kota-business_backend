@@ -1,19 +1,11 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
+from .models import Product, Order, Image
 
-from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser, Product, Order
-
-
-class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
-    model = CustomUser
-
-
+# Register Product model
 admin.site.register(Product)
+
+# Register Owner model
 admin.site.register(Order)
-admin.site.register(CustomUser, CustomUserAdmin)
 
-
-# Register your models here.
+# Register Image model
+admin.site.register(Image)
